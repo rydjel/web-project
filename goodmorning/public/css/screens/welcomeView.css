@@ -1,0 +1,10 @@
+body
+{
+    background-color:#008000;
+}
+
+[class*="col"]
+{
+    margin-bottom: 20px;
+}
+
