@@ -1,0 +1,7 @@
+---
+mysql_root_password: "molsha"
+app_user: "ubuntu"
+http_host: "172.31.83.87"
+http_conf: "good.conf"
+http_port: "80"
+disable_default: true
