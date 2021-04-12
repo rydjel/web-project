@@ -83,6 +83,7 @@
       ansible.builtin.copy:
         directory_mode: yes
         src: "/home/ubuntu/web-project/goodmorning"
+        remote_src: no
         dest: "/var/www/html/"
         mode: '0755'
 
