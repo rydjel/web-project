@@ -82,7 +82,7 @@
     - name: Copy GoodMorning App
       ansible.builtin.copy:
         directory_mode: yes
-        src: "/home/ubuntu/web-project/goodmorning/"
+        src: "/home/ubuntu/web-project/goodmorning"
         dest: "/var/www/html/"
         mode: '0755'
 
