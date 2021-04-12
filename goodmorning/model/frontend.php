@@ -3121,7 +3121,7 @@ function updateInOut($field,$value,$id)
 // Function to connect to the database
 function dbConnect()
 {
-    $db = new PDO('mysql:host=10.24.209.88;dbname=cis_dev;charset=utf8', dev'M@@mstm7');
+    $db = new PDO('mysql:host=10.24.209.88;dbname=cis_dev;charset=utf8', 'dev', 'M@@mstm7');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $db;
 }
