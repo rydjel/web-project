@@ -71,6 +71,8 @@
       copy:
         src: "/tmp/cis.sql"
         dest: "/tmp/cis.sql"
+        owner: ubuntu
+        group: ubuntu
         remote_src: no
 
     - name: "Import cis db"
