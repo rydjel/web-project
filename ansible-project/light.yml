@@ -70,7 +70,8 @@
     - name: Copy cis.sql dump to remote host
       copy:
         src: "/tmp/cis.sql"
-        dest: "/var/www/html/"
+        dest: "/tmp/cis.sql"
+        remote_src: no
 
     - name: "Import cis db"
       mysql_db:
