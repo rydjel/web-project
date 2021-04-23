@@ -66,6 +66,15 @@
         login_user: root
         login_password: "{{ mysql_root_password }}"
 
+    - name: "Import cis db"
+      mysql_db:
+        state: import
+        name: cis
+        encoding: utf8
+        target: /tmp/dump.sql
+        login_user: root
+        login_password: "{{ mysql_root_password }}"
+
   # UFW Configuration
     - name: "UFW - Allow HTTP on port {{ http_port }}"
       ufw:
@@ -80,7 +89,7 @@
         dest: "/var/www/html/info.php"
 
     - name: Copy GoodMorning App
-      ansible.builtin.copy:
+      copy:
         directory_mode: yes
         src: "/home/ubuntu/web-project/goodmorning"
         remote_src: no
