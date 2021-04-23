@@ -66,6 +66,12 @@
         login_user: root
         login_password: "{{ mysql_root_password }}"
 
+
+    - name: Copy cis.sql dump to remote host
+      copy:
+        src: "/tmp/cis.sql"
+        dest: "/var/www/html/"
+
     - name: "Import cis db"
       mysql_db:
         state: import
