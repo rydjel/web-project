@@ -68,12 +68,7 @@
 
 
     - name: Copy cis.sql dump to remote host
-      copy:
-        src: "/tmp/cis.sql"
-        dest: "/tmp/cis.sql"
-        owner: ubuntu
-        group: ubuntu
-        remote_src: true
+      ansible.builtin.shell: scp /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
 
     - name: "Import cis db"
       mysql_db:
