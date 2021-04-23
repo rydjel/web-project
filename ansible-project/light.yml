@@ -68,7 +68,7 @@
 
 
     - name: copy cis.sql dump to remote host
-      command:  scp /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
+      command:  scp  -oStrictHostKeyChecking=no /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
 
     - name: "Import cis db"
       mysql_db:
@@ -93,7 +93,7 @@
         dest: "/var/www/html/info.php"
 
     - name: Copy GoodMorning App
-      command:  scp -r /home/ubuntu/web-project/goodmorning ubuntu@172.31.83.87:/var/www/html/
+      command:  scp -r -oStrictHostKeyChecking=no /home/ubuntu/web-project/goodmorning ubuntu@172.31.83.87:/var/www/html/
         
 
   handlers:
