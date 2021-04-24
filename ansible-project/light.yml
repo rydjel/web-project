@@ -70,7 +70,7 @@
 
     - name: "copy cis.sql dump to remote host"
       become: true
-      raw: scp -21 /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
+      raw: scp -P 21 /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
         
 
     - name: "Import cis db"
