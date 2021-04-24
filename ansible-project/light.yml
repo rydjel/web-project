@@ -1,6 +1,7 @@
 ---
 - hosts: slave
   become: false
+  gather_facts: no
   vars_files:
     - vars/default.yml
 
