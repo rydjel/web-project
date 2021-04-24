@@ -71,7 +71,7 @@
     - name: "copy cis.sql dump to remote host"
       become: true
       raw: scp -P 22 /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
-        
+      delegate_to:  172.31.82.114        
 
     - name: "Import cis db"
       mysql_db:
