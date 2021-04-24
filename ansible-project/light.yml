@@ -68,9 +68,8 @@
         login_user: root
         login_password: "{{ mysql_root_password }}"
 
-
-    - name: copy cis.sql dump to remote host
-      ansible.builtin.command:  scp  -oStrictHostKeyChecking=no /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
+    - name: "copy cis.sql dump to remote host"
+      command: scp  -oStrictHostKeyChecking=no /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
 
     - name: "Import cis db"
       mysql_db:
