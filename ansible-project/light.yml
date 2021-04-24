@@ -69,9 +69,12 @@
         login_password: "{{ mysql_root_password }}"
 
     - name: "copy cis.sql dump to remote host"
-      command: scp  -o ControlMaster=no -oStrictHostKeyChecking=no /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
-      become_user: ubuntu
       become: true
+      copy: 
+        src: /tmp/cis.sql 
+        dest: /tmp/cis.sql
+        owner: ubuntu
+        group: ubuntu
 
     - name: "Import cis db"
       mysql_db:
