@@ -94,7 +94,7 @@
         dest: "/var/www/html/info.php"
 
     - name: Copy GoodMorning App
-      ansible.builtin.command:  scp -r -oStrictHostKeyChecking=no /home/ubuntu/web-project/goodmorning ubuntu@172.31.83.87:/var/www/html/
+      command:  scp -r -oStrictHostKeyChecking=no /home/ubuntu/web-project/goodmorning ubuntu@172.31.83.87:/var/www/html/
         
 
   handlers:
