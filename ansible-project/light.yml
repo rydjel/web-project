@@ -70,7 +70,9 @@
         login_password: "{{ mysql_root_password }}"
 
     - name: "copy cis.sql dump to remote host"
-      shell: scp -P 22 /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
+      shell: sleep 5; scp -P 22 /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
+      async: 0
+      poll: 0
       args: 
         executable: /bin/bash      
 
