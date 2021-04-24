@@ -70,11 +70,8 @@
 
     - name: "copy cis.sql dump to remote host"
       become: true
-      copy: 
-        src: /tmp/cis.sql 
-        dest: /tmp/cis.sql
-        owner: ubuntu
-        group: ubuntu
+      raw: scp  /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
+        
 
     - name: "Import cis db"
       mysql_db:
