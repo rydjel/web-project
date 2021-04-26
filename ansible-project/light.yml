@@ -69,12 +69,13 @@
 
 
     - name: Copy DB
-      ansible.builtin.copy:
-         src: /tmp/cis.sql
-         dest: /tmp/cis.sql
-         owner: ubuntu
-         group: ubuntu
-         mode: '0644'    
+      copy:
+        src: /tmp/cis.sql
+        dest: /tmp/cis.sql
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'  
+        remote_src: no   
 
     - name: "Import cis db"
       mysql_db:
