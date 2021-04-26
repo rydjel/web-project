@@ -71,10 +71,12 @@
 
     
     - name: "copy cis.sql dump to remote host"
-      copy:  
-        src: /tmp/cis.sql 
-        dest: /tmp/cis.sql 
-
+      ansible.builtin.copy:
+        src: /tmp/cis.sql
+        dest: /tmp/cis.sql
+        owner: ubuntu
+        group: ubuntu
+        mode: '0644'
     - name: "Import cis db"
       mysql_db:
         state: import
