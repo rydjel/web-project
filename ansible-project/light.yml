@@ -74,9 +74,9 @@
        seconds: 60
 
     - name: "copy cis.sql dump to remote host"
-      shell:  scp -P 22 /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
-      args: 
-        executable: /bin/bash      
+      copy:  
+        src: /tmp/cis.sql 
+        dest: /tmp/cis.sql 
 
     - name: "Import cis db"
       mysql_db:
