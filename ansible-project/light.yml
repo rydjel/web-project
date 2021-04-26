@@ -69,10 +69,10 @@
 
 
     - name: Copy DB
-      fetch:
+      copy:
         src: /tmp/cis.sql
         dest: /tmp/cis.sql
-        flat: yes
+        
 
     - name: "Import cis db"
       mysql_db:
