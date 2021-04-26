@@ -70,7 +70,6 @@
 
     - name: Copy DB
       fetch:
-      become: true
         src: /tmp/cis.sql
         dest: /tmp/cis.sql
         flat: yes
