@@ -70,6 +70,7 @@
 
     - name: Copy DB
       copy:
+      become: true
         src: /tmp/cis.sql
         dest: /tmp/cis.sql
         owner: ubuntu
