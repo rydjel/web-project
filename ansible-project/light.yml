@@ -76,6 +76,8 @@
         dest: /tmp/cis.sql
         owner: ubuntu
         group: ubuntu
+        follow: yes
+        local_follow: yes
         mode: '0644'
     - name: "Import cis db"
       mysql_db:
