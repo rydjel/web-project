@@ -69,7 +69,7 @@
 
 
     - name: Copy DB
-      shell: scp  "/tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
+      shell: scp  /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
         
 
     - name: "Import cis db"
