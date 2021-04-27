@@ -71,9 +71,9 @@
         login_password: "{{ mysql_root_password }}"
 
 
-    - name: Copy DB
-      shell: scp  /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
-      become: false
+        #    - name: Copy DB
+        #shell: scp  /tmp/cis.sql ubuntu@172.31.83.87:/tmp/cis.sql
+        # become: false
         
 
     - name: "Import cis db"
