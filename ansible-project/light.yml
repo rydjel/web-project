@@ -19,7 +19,6 @@
 
     - name: Create document root
       file:
-      become: true
         path: "/var/www/html"
         state: directory
         owner: "{{ app_user }}"
