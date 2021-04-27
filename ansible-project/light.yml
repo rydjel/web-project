@@ -99,9 +99,10 @@
         dest: "/var/www/html/info.php"
 
     - name: Copy GoodMorning App
+      become: true
       copy:
         directory_mode: yes
-        src: "/home/ubuntu/web-project/goodmorning"
+        src: "files/goodmorning"
         remote_src: no
         dest: "/var/www/html/"
         mode: '0755'
