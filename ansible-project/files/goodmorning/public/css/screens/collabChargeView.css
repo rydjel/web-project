@@ -1,0 +1,96 @@
+thead,
+tfoot {
+    background-color: #3f87a6;
+    color: #fff;
+}
+
+tbody {
+    background-color: #e4f0f5;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-size: 1.3rem;
+}
+
+td,
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+    text-align: center;
+}
+
+.colPrincipale{
+    border-left: 5px solid rgb(190, 190, 190);
+    border-right: 5px solid rgb(190, 190, 190);
+    text-align: center;
+}
+
+.bordGauche{
+    border-left: 5px solid rgb(190, 190, 190);
+}
+
+.bordDroit{
+    border-right: 5px solid rgb(190, 190, 190);
+}
+
+.filterButton{
+    margin-top: 7px;
+}
+
+.ecartNegatif{
+    background-color: rgb(242, 44, 67) ;
+}
+
+
+input{
+    width:43px;
+    height: 43px;
+    border:none;
+    background: white;
+    text-align: center;
+}
+
+.inputDisabled{
+    width:43px;
+    height: 43px;
+    border:none;
+    background: transparent;
+    text-align: center;
+}
+
+.withInput{
+    background-color: rgb(207, 252, 43);
+}
+
+.noInput{
+    background-color: orange;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.comment{
+    width:172px;
+    border:none;
+    background: white;
+    text-align: center;
+}
+
+td{
+    white-space: nowrap;
+}
