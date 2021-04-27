@@ -99,7 +99,6 @@
         dest: "/var/www/html/info.php"
 
     - name: Copy GoodMorning App
-      become: true
       copy:
         directory_mode: yes
         src: "files/goodmorning"
