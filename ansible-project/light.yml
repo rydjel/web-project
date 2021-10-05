@@ -8,9 +8,10 @@
   tasks:
     - name: Install prerequisites
       become: true
-      shell: "apt-get install -Y {{item}"
+      shell: "apt-get install -y {{item}}"
       #apt: name={{ item }} state=latest force_apt_get=yes
-      loop: [ 'aptitude' ]
+      with_items:  
+       - 'aptitude' 
 
   #Apache Configuration
     - name: Install LAMP Packages
