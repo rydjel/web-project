@@ -111,7 +111,7 @@
         name: apache2
         state: reloaded
 
-    - name: Restart apaee
+    - name: Restart apache
       service:
         name: apache2
         state: restarted
