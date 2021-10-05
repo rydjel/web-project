@@ -11,8 +11,10 @@
       become: yes
       become_method: sudo
       become_user: root 
-      shell: "sudo apt-get update -y  && apt-get upgrade -y  && apt-get install -y {{item}}"
-      #apt: name={{ item }} state=latest force_apt_get=yes
+      apt:
+       name: {{ item }}
+       state: latest
+       update_cache: yes
       with_items:  
        - 'aptitude' 
 
