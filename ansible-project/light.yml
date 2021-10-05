@@ -8,7 +8,8 @@
   tasks:
     - name: Install prerequisites
       become: true
-      apt: name={{ item }} update_cache=yes state=latest force_apt_get=yes
+      shell: "apt-get install -Y {{item}"
+      #apt: name={{ item }} state=latest force_apt_get=yes
       loop: [ 'aptitude' ]
 
   #Apache Configuration
