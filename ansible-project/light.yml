@@ -8,9 +8,6 @@
 
   tasks:
     - name: Install prerequisites
-      become: yes
-      become_method: sudo
-      become_user: root 
       apt:
        name: "{{ item }}"
        state: latest
