@@ -16,7 +16,8 @@
        state: latest
        update_cache: yes
       with_items:  
-       - 'aptitude' 
+       - 'aptitude'
+       - 'vim' 
 
   #Apache Configuration
     - name: Install LAMP Package s
