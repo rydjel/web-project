@@ -2,12 +2,15 @@
 ---
 - hosts: slave
   become: true
+  become_method: sudo 
   vars_files:
     - vars/default.yml
 
   tasks:
     - name: Install prerequisites
-      become: true
+      become: yes
+      become_method: sudo
+      become_user: root 
       shell: "apt-get install -y {{item}}"
       #apt: name={{ item }} state=latest force_apt_get=yes
       with_items:  
