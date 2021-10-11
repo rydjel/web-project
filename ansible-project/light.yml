@@ -89,7 +89,7 @@
 
     - name: Copy DB
       shell: scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql
-      delegate_to: "{{ ansible_rcontroller }}"
+      #delegate_to: "{{ ansible_rcontroller }}"
 
         
 
