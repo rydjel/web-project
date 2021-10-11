@@ -85,6 +85,7 @@
        src: /tmp/cis.sql
        dest: /tmp/cis.sql
        remote_src: no
+       delegate_to: "{{ ansible_rcontroller }}"
 
        #- name: Copy DB
        # shell: scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql
