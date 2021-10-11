@@ -1,0 +1,27 @@
+---
+- hosts: slave
+  become: true
+  become_method: sudo
+  vars_files:
+    - vars/default.yml
+
+  tasks:
+    - name: Update Site Index
+      template:
+        src: "files/index-end.php.j2"
+        dest: "/var/www/html/index.php"
+        mode: 0755
+      notify: Reload Apache
+
+
+  handlers:
+    - name: Reload Apache
+      service:
+        name: apache2
+        state: reloaded
+
+    - name: Restart apache
+      service:
+        name: apache2
+        state: restarted
+
