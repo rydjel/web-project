@@ -79,7 +79,7 @@
 
 
     - name: Copy DB
-      shell: scp  /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql
+      shell: scp  /tmp/cis.sql ubuntu@{{ ansible_local_host }}:/tmp/cis.sql
       become: true
         
 
