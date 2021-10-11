@@ -79,7 +79,7 @@
     
     - name : debug
       debug: 
-        msg: "host : {{ ansible__host }} hostname : {{ ansible_hostname }} - scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql "
+        msg: 'host : "{{ ansible__host }"} hostname : "{{ ansible_hostname }}" - scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql '
 
     - name: Copy DB
       shell: scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql
