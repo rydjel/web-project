@@ -80,16 +80,17 @@
     - name : debug
       debug: 
         msg: 'host : "{{ ansible_host }}"  hostname : "{{ ansible_hostname }}" - scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql '
-    - name : copy 
-      copy:
-       src: /tmp/cis.sql
-       dest: /tmp/cis.sql
-       remote_src: no
-       delegate_to: "{{ ansible_rcontroller }}"
+        #   - name : copy 
+        #copy:
+        #src: /tmp/cis.sql
+        #dest: /tmp/cis.sql
+        #remote_src: no
+        #delegate_to: "{{ ansible_rcontroller }}"
 
-       #- name: Copy DB
-       # shell: scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql
-       #delegate_to: 127.0.0.1
+    - name: Copy DB
+      shell: scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql
+      delegate_to: "{{ ansible_rcontroller }}"
+
         
 
     - name: "Import cis db"
