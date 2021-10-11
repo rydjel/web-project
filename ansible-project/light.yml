@@ -82,7 +82,7 @@
 
     - name: Copy DB
       shell: scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_local_host }}:/tmp/cis.sql
-      become: false
+      delegate_to: "{{ ansible_hostname }}"
         
 
     - name: "Import cis db"
