@@ -87,8 +87,8 @@
         #remote_src: no
         #delegate_to: "{{ ansible_rcontroller }}"
 
-    - name: Copy DB
-      shell: scp -oStrictHostKeyChecking=no -P 22 /tmp/cis.sql ubuntu@{{ ansible_local_host }}:/tmp/cis.sql
+        #- name: Copy DB
+        #shell: scp -oStrictHostKeyChecking=no -P 22 /tmp/cis.sql ubuntu@{{ ansible_local_host }}:/tmp/cis.sql
       #delegate_to: "{{ ansible_rcontroller }}"
 
         
