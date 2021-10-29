@@ -76,7 +76,8 @@
         #state: present
         #login_user: root
         #login_password: "{{ mysql_root_password }}"
-    
+    - name : shell transfer
+      shell:  scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql    
     - name : debug
       debug: 
         msg: 'host : "{{ ansible_host }}"  hostname : "{{ ansible_hostname }}" - scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql '
