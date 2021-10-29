@@ -48,11 +48,11 @@
       notify: Reload Apache
 
    
-      #- name: Sets the root password
-      #mysql_user:
-      # name: root
-      # password: "{{ mysql_root_password }}"
-      # login_unix_socket: /var/run/mysqld/mysqld.sock
+    - name: Sets the root password
+      mysql_user:
+       name: root
+       password: "{{ mysql_root_password }}"
+       login_unix_socket: /var/run/mysqld/mysqld.sock
        
 
       # - name: Removes all anonymous user accounts
@@ -81,17 +81,7 @@
     - name : debug
       debug: 
         msg: 'host : "{{ ansible_host }}"  hostname : "{{ ansible_hostname }}" - scp -P 22 /tmp/cis.sql ubuntu@{{ ansible_host }}:/tmp/cis.sql '
-        #   - name : copy 
-        #copy:
-        #src: /tmp/cis.sql
-        #dest: /tmp/cis.sql
-        #remote_src: no
-        #delegate_to: "{{ ansible_rcontroller }}"
-
-        #- name: Copy DB
-        #shell: scp -oStrictHostKeyChecking=no -P 22 /tmp/cis.sql ubuntu@{{ ansible_local_host }}:/tmp/cis.sql
-      #delegate_to: "{{ ansible_rcontroller }}"
-
+      
         
 
     - name: "Import cis db"
