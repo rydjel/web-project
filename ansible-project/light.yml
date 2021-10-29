@@ -113,6 +113,7 @@
         dest: "/var/www/html/"
         mode: '0755'
 
+
   handlers:
     - name: Reload Apache
       service:
